@@ -25,7 +25,7 @@ HEADERS = $(SRC_DIR)/TetrisSolver.h \
 
 # Rule to build the executable
 $(EXECUTABLE): $(SOURCES) $(SRC_DIR)/lodepng/lodepng.o
-	@ $(CC) -o $@ $(INCLUDES) $(CFLAGS) $(SOURCES) $(SRC_DIR)/lodepng/lodepng.o $(LFLAGS) $(LIBS)
+	@$(CC) -o $@ $(INCLUDES) $(CFLAGS) $(SOURCES) $(SRC_DIR)/lodepng/lodepng.o $(LFLAGS) $(LIBS)
 
 # Compile lodepng.cpp with specific flags
 $(SRC_DIR)/lodepng/lodepng.o: $(SRC_DIR)/lodepng/lodepng.cpp

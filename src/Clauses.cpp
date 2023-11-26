@@ -2,7 +2,13 @@
 # include "Cell.h"
 # include "AuxFuncs.h"
 
-void Clauses::UniqueConditions (std::vector<std::vector <int> >& _clauseNegArrUCList, int _rowNum, int _colNum, int _stateNum, int _bbb,  int _varNum) {
+void Clauses::UniqueConditions (std::vector<std::vector <int> >& _clauseNegArrUCList, 
+                                int _rowNum, 
+                                int _colNum, 
+                                int _stateNum, 
+                                int _bbb,  
+                                int _varNum) 
+{
     for (int row = 1; row <= _rowNum; ++row) {
         for (int col = 1; col <= _colNum; ++col) {
             std::vector<int> clauseNegArr1(_varNum, -1); // Big OR
@@ -23,7 +29,13 @@ void Clauses::UniqueConditions (std::vector<std::vector <int> >& _clauseNegArrUC
     }
 }
 
-void Clauses::BoundaryConditions (std::vector<std::vector <int> >& _clauseNegArrBCList, int _rowNum, int _colNum, int _stateNum, int _bbb, int _varNum) {
+void Clauses::BoundaryConditions   (std::vector<std::vector <int> >& _clauseNegArrBCList, 
+                                    int _rowNum, 
+                                    int _colNum, 
+                                    int _stateNum, 
+                                    int _bbb, 
+                                    int _varNum) 
+{
     for (int row = -2; row <= 0; ++row) {
         for (int col = -2; col <= _colNum+3; ++col) {
             for (int state = 1; state <= _stateNum; ++state) {
@@ -63,7 +75,12 @@ void Clauses::BoundaryConditions (std::vector<std::vector <int> >& _clauseNegArr
 }
 
 
-void Clauses::PlacementConditions  (std::vector<std::vector <int> >& _clauseNegArrPCList, int _rowNum, int _colNum, int _stateNum, int _bbb, int _varNum, 
+void Clauses::PlacementConditions  (std::vector<std::vector <int> >& _clauseNegArrPCList, 
+                                    int _rowNum, 
+                                    int _colNum, 
+                                    int _stateNum, 
+                                    int _bbb, 
+                                    int _varNum, 
                                     const std::unordered_map<char, std::pair<int, bool> >& _rotationStateNumIsUsed, 
                                     std::unordered_map<char, std::vector<std::vector<std::vector<int> > > >& _rotationBlockCoordinates) 
 {

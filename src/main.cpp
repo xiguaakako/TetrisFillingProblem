@@ -56,7 +56,6 @@ int main() {
         TetrisSolver::solverAddClause (solver, varList, clauseNegArrBCList[i]);
     }
 
-
     bool isSAT;
     std::vector<int> varValueIfSAT(varNum, -1);
     TetrisSolver::SATSolver (isSAT, solver, varValueIfSAT);
