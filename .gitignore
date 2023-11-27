@@ -1,14 +1,14 @@
-/.vscode
+./.vscode
+./.gitignore
 
+./outputs/output.png
 
-/outputs/output.png
+./doc/TetrisSAT.aux
+./doc/TetrisSAT.log
+./doc/TetrisSAT.out
+./doc/TetrisSAT.synctex.gz
+./doc/TetrisSAT.tex
+./doc/Implementation.png
+./doc/.DS_Store
 
-/doc/TetrisSAT.aux
-/doc/TetrisSAT.log
-/doc/TetrisSAT.out
-/doc/TetrisSAT.synctex.gz
-/doc/TetrisSAT.tex
-/doc/Implementation.png
-/doc/.DS_Store
-
-/.DS_Store
+./.DS_Store
